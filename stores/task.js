@@ -28,6 +28,12 @@
 					DELETE_SELECTED_TASKS: 'deleteSelectedTasks'
 				},
 				addTask: function(task) {
+					if (!task || !task.title) {
+						return;
+					}
+
+					task.id = uuid.v4();
+
 					this.state.set(['tasks', task.id], task);
 				},
 				selectAllTasks: function() {

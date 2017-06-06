@@ -5,7 +5,7 @@
 			<div class="ui item" ng-repeat="task in vm.tasks track by task.id">
 				<div class="ui checkbox">
 					<input type="checkbox" ng-click="vm.toggleSelection($event, task)" ng-checked="task.selected" readonly>
-					<label>{{task.title}}</label>
+					<label>{{::task.title}}</label>
 				</div>
 			</div>
 		</div>

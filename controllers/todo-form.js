@@ -15,9 +15,7 @@
 		};
 
 		function getNewTask() {
-			return {
-				id: uuid.v4()
-			};
+			return {};
 		}
 	}
 
