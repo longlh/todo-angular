@@ -1,0 +1,22 @@
+<!doctype html>
+<html data-ng-app="todo">
+	<head>
+		<title>TODO Application</title>
+		<link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
+		<script src="http://wzrd.in/standalone/uuid@latest"></script>
+		<script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="/semantic/dist/semantic.min.js"></script>
+		<script type="text/javascript" src="/node_modules/angular/angular.min.js"></script>
+		<script type="text/javascript" src="/node_modules/flux-angular/release/flux-angular.min.js"></script>
+	</head>
+	<body>
+		<div class="ui container">
+			<div ng-include src="'/views/todo-form.html'"></div>
+			<div ng-include src="'/views/todo-list.html'"></div>
+		</div>
+		<script type="text/javascript" src="/app.js"></script>
+		<script type="text/javascript" src="/stores/task.js"></script>
+		<script type="text/javascript" src="/controllers/todo-form.js"></script>
+		<script type="text/javascript" src="/controllers/todo-list.js"></script>
+	</body>
+</html>

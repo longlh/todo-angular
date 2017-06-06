@@ -1,0 +1,18 @@
+<div class="ui basic segment" ng-controller="ListController as vm">
+	<div ng-if="vm.total > 0">
+		<div ng-include src="'/views/todo-buttons.html'"></div>
+		<div class="ui huge relaxed list">
+			<div class="ui item" ng-repeat="task in vm.tasks track by task.id">
+				<div class="ui checkbox">
+					<input type="checkbox" ng-click="vm.toggleSelection($event, task)" ng-checked="task.selected" readonly>
+					<label>{{task.title}}</label>
+				</div>
+			</div>
+		</div>
+		<div ng-if="vm.total > 10" ng-include src="'/views/todo-buttons.html'"></div>
+	</div>
+	<div ng-if="vm.total == 0">
+		<label>Please add your first task</label>
+	</div>
+</div>
+

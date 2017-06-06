@@ -1,0 +1,9 @@
+<div class="ui basic segment" ng-controller="FormController as vm">
+	<form class="ui form" ng-submit="vm.createTask()">
+		<div class="field">
+			<label>Task</label>
+			<input type="text" placeholder="Watch TV" ng-model="vm.task.title">
+		</div>
+		<button class="ui primary button" type="submit">Add task</button>
+	</form>
+</div>
